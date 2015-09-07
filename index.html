@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordPress REST API Demo</title>
+  </head>
+  
+  <body>
+    <div id="container">
+      <dl id="list">
+      
+      </dl>
+    
+    </div>
+  
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        url = 'http://local.wordpress.dev/wp-json/wp/v2/posts/';
+        $.ajax({dataType:"json",
+                url: url
+          }).done( function(data) {
+            console.log(data);
+            $.each( data, function(i, item){
+              $("#list").append("<dt><h2>"+item.title.rendered+"</h2></dt><dd>"+item.content.rendered+"</dd>");
+              console.log(JSON.stringify(item));
+            });
+        
+        });
+        
+          
+      })(jQuery);
+        
+    
+    </script>
+  </body>
+</html>
