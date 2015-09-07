@@ -1,0 +1,19 @@
+{
+  "name": "wcpune-demo",
+  "version": "0.1",
+  "homepage": "https://github.com/grvrulz/wcpune-demo",
+  "authors": [
+    "Gaurav Pareek <me@grv.rocks>"
+  ],
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
